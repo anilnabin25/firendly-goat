@@ -84,6 +84,20 @@ services:
             - '/dev/shm:/dev/shm'
         networks:
             - sail
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - mysql
+            - laravel.test
+        environment:
+            PMA_HOST: mysql
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            PMA_PORT: 3306
+        restart: always
+        ports:
+            - 8001:80
+        networks:
+            - sail
 networks:
     sail:
         driver: bridge
