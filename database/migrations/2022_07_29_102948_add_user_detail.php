@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function ($table) {
-            $table->string('profile_url')->default('assets/image/user/user-icon.png')->before("created_at");
+                $table->string('profile_url')->default('assets/image/user/user-icon.png')->before("created_at");
             $table->string('address')->nullable()->before("profile_url");
             $table->string('mobile_no')->nullable()->before("address");
             $table->date('dob')->nullable()->before("mobile_no");
