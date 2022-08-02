@@ -1,6 +1,6 @@
 # Getting Started
 ```
-git clone git@github.com:nepadey/laravel-docker-template.git
+git clone git@github.com:anilnabin25/firendly-goat.git
 docker run --rm --interactive --tty -v $(pwd):/app composer install
 ```
 * Note docker is required.
